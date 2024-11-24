@@ -1,0 +1,37 @@
+/* text */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.tc{
+    text-align: center;
+}
+.hsmall{
+    font-size: 1.25rem;
+}
+.hmedium{
+    font-size: 1.5rem;
+}
+.hbig{
+    font-size: 1.75rem;
+}
+ul{
+    list-style: none;
+}
+
+/* background */
+
+.bg-dark-blue{
+    background:#062e51 ;
+}
+.bg-light-blue{
+    background:#336ea2 ;
+}
+
+/* caontainer */
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* form */

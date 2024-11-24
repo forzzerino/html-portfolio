@@ -1,0 +1,349 @@
+:root{
+    --border: 2px solid #dce1e4;
+    --gradient: linear-gradient(
+        /* -45deg, #243748, #2A2E45); */
+        -45deg, #4D4861, #605770);
+    --boxshadow: 5px 5px 15px #bcc3d0, 
+    -5px -5px 15px #fff;
+
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    background-color: #eaecee ;
+    color: #3c3e41;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    border-radius: 50%;
+}
+a{
+    color:#3c3e41;
+    text-decoration: none;
+}
+header{
+    padding: 10px;
+    width: calc(100% -20px);
+    border-bottom: var(--border);
+    display: flex;
+    justify-content: space-around;
+    background-color: #eaecee;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+header ul{
+    list-style: none;
+    padding: 0px;
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+header ul li{
+    padding: 0 30px;
+    font-size: large;
+    font-weight: 500;
+}
+header ul li:hover{
+    
+    font-weight: 700;
+}
+
+.container{
+    width: 1200px;
+    max-width: 90%;
+    margin:0 auto;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.banner .content{
+    text-align: justify;
+    padding-right: 50px;
+}
+.banner .content h1{
+    font-size: 6em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.gradientText{
+    display: inline-block;
+    background-image: var(--gradient);
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes effectText {
+    from{
+        max-width: 0;
+    }to{
+        max-width: 500px;
+    }
+    
+}
+
+@keyframes changeText {
+    0%{
+        content:attr(data-job1);
+    }
+    100%{
+        content: attr(data-job2);
+    }
+    
+}
+.job::before{
+    content: attr(data-job1);
+    overflow: hidden;
+    display: inline-flex;
+    animation: 
+        effectText 2s cubic-bezier(0.075, 0.82, 0.9, 1) infinite alternate,
+        changeText 8s linear infinite;
+    
+
+}
+
+.find{
+    margin-top: 50px;
+}
+.find ul{
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+}
+.find ul li{
+    width: 50px;
+    height: 50px;
+    box-shadow: var(--boxshadow);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    margin-bottom: 0;
+}
+.find ul li:hover{
+    color:#fff;
+    background-image: var(--gradient);
+}
+
+.banner .avatar img{
+    width: 90%;
+}
+.banner .avatar{
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.banner .avatar::before{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    box-shadow: var(--boxshadow);
+    content: '';
+    bottom: 0;
+    z-index: -1;
+}
+
+
+.title{
+    text-align: center;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.listSkill{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.listSkill .item{
+    margin: 10px;
+    font-weight:bold;
+}
+.listSkill .evaluate{
+    width: 100%;
+    height: 30px;
+    box-shadow: var(--boxshadow);
+    border-radius: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+.listSkill .evaluate::before{
+    animation: evaluate 2s cubic-bezier(0.075, 0.82, 0.165, 1),
+        gradientchanger 1s linear infinite alternate;
+    position: absolute;
+    height: 100%;
+    width: var(--point);
+    content: '';
+    background-image: var(--gradient);
+    border-radius: 20px;
+}
+
+@keyframes evaluate {
+    from{
+        width: 0;
+    }to{
+        width: var(--point);
+    }
+    
+}
+
+
+
+.listProject{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    border-bottom: var(--border);
+    padding-bottom: 50px;
+}
+
+.listProject .item{
+    text-align: center;
+    box-shadow: var(--boxshadow);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 50px;
+}
+
+.listProject .item img{
+    width: 90%;
+    border-radius: 10px;
+}
+.contact{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 20px;
+}
+
+.contact li{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    box-shadow: var(--boxshadow);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    
+}
+.contact li:hover{
+    color:#fff;
+    background-image: var(--gradient);
+}
+
+header input, header .navdiv, header ul .menu{
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width:1024px){
+    .banner .content h1{
+        font-size: 2em;
+        
+    }
+    .listProject{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+
+@media screen and (max-width:767px){
+    header ul{
+        position: fixed;
+        background-color: #F0F3F5;
+        width: 70%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(5,70px);
+        margin: 0;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+    header .navdiv{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+    }
+    header label{
+        width: 50px;
+        height: 50px;
+        box-shadow: var(--boxshadow);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input#menu:checked ~ .nav{
+        transform: translateX(0);
+    }
+   
+    header .nav label{
+        display: flex;
+        transform: translateX(20px);
+    }
+    .banner{
+        grid-template-columns: 1fr;
+    }
+    .banner .content{
+        padding-right: 0;
+
+    }
+    .banner .avatar{
+        grid-row-start: 1;
+    }
+    .listSkill, .listProject{
+        grid-template-columns: 1fr;
+
+    }
+    header .nav{
+        z-index: 2;
+    }
+    
+}

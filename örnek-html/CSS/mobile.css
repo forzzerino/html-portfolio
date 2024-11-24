@@ -1,0 +1,75 @@
+#navbar ul li a{
+    font-size: 1rem;
+}
+
+#navbar{
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+    height: 100px;
+}
+
+#home .name .socials{
+    margin: 0 auto;
+    width: 70%;
+    /* background-color: blue; */
+    justify-content:center;
+    border-bottom: none;
+}
+#home .name .socials a i{   
+    font-size: 2.5em;
+}
+#home .name .socials .icon{
+    width: em;
+    height: 3em; 
+    /* background-color: red; */
+    outline: none;
+}
+
+
+#about{
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+#about .bigbox h3{
+    display: inline-block;
+    font-weight: 100;
+    width: 150px;
+    color: #e60067;
+    letter-spacing: .05rem;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    border-bottom: 1px solid;
+}
+
+#about .bigbox .box{
+   font-size: 1rem;
+    background-color:#182631;
+    padding: 1rem;
+    border-radius: 20px;
+    letter-spacing: .05rem;
+}
+
+
+
+#contact .container .form-group{
+    display:flex;
+    flex-direction: column;
+    
+    /* background-color: rgb(33, 150, 123); */
+}
+#contact .container .form-group .eleman{
+    margin: 0 auto;
+    text-align: center;
+}
+#contact .container .form-group button{
+    padding: .75rem;
+    margin-bottom: 1rem;
+}
+
+#contact .container .lookbox .socials ul li{
+    
+    font-size: 1.75rem;
+}
